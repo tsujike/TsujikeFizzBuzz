@@ -24,7 +24,7 @@ function myFunction() {
 
 
 /**
- * repeatはこの方が短い
+ * repeat()
 */
 function tsujikeFizzBuzz2() {
   const oneHundred = '0'.repeat(101);
@@ -32,10 +32,23 @@ function tsujikeFizzBuzz2() {
   intArr.shift();
 
   for (const i of intArr) {
-    console.log((['Fizz'][i % 3] || '') + (['Buzz'][i % 5] || '') || i);
+    console.log((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i);
   }
 }
 
+
+/**
+ * padStart()
+*/
+function tsujikeFizzBuzz() {
+  const oneHundred = '0'.padStart(101, '0');
+  const intArr = Object.keys(oneHundred);
+  intArr.shift();
+
+  for (const i of intArr) {
+    console.log(i % 15 ? i % 3 ? i % 5 ? i : 'Buzz' : 'Fizz' : 'FizzBuzz') 
+  }
+}
 
 
 /**
@@ -58,7 +71,7 @@ function tsujikeFizzBuzz2021Sep() {
  * 1行で書くなら
 */
 function fizzBuzzOneLiner1() {
-  for (let i = 1; i <= 100; i++) { console.log((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i); }
+  for (let i = 1; i <= 100; i++) { console.log((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i) }
 }
 
 
