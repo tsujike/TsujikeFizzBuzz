@@ -51,3 +51,23 @@ function tsujikeFizzBuzz2021Sep() {
   }
 
 }
+
+
+
+/**
+ * 1行で書くなら
+*/
+function fizzBuzzOneLiner1() {
+  for (let i = 1; i <= 100; i++) { console.log((i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i); }
+}
+
+
+function fizzBuzzOneLiner2() {
+  for (let i = 1; i <= 100; i++) { console.log(i % 15 ? i % 3 ? i % 5 ? i : 'Buzz' : 'Fizz' : 'FizzBuzz') }
+}
+
+
+function fizzBuzzOneLiner3() {
+  for (const value of Object.keys(new Array(100).fill(0))) { console.log((['Fizz'][(Number(value) + 1) % 3] || '') + (['Buzz'][(Number(value) + 1) % 5] || '') || Number(value) + 1) }
+
+} 
