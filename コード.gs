@@ -23,6 +23,18 @@ function myFunction() {
 }
 
 
+/**
+ * repeatはこの方が短い
+*/
+function tsujikeFizzBuzz2() {
+  const oneHundred = '0'.repeat(101);
+  const intArr = Object.keys(oneHundred);
+  intArr.shift();
+
+  for (const i of intArr) {
+    console.log((['Fizz'][i % 3] || '') + (['Buzz'][i % 5] || '') || i);
+  }
+}
 
 
 
