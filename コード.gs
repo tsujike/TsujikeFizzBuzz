@@ -21,3 +21,21 @@ function myFunction() {
   console.log(tsujikeFizzBuzz(1, 100));
 
 }
+
+
+
+
+
+/**
+ * new Array(要素数)はnullで埋めるんだけど、リテラルのnullとは違う
+*/
+function tsujikeFizzBuzz2021Sep() {
+
+  const oneHundred = new Array(100).fill(0);
+
+  for (const value of Object.keys(oneHundred)) {
+    const i = Number(value) + 1;
+    console.log((['Fizz'][i % 3] || '') + (['Buzz'][i % 5] || '') || i);
+  }
+
+}
